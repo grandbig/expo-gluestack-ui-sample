@@ -5,8 +5,7 @@ import ParallaxScrollView from '@/components/ParallaxScrollView';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
 
-import { Button, ButtonIcon, ButtonText } from '@/components/ui/button';
-import { IconSymbol } from '@/components/ui/IconSymbol';
+import { PrimaryButton } from '@/components/common/PrimaryButton';
 
 export default function HomeScreen() {
   return (
@@ -20,18 +19,20 @@ export default function HomeScreen() {
       }>
       <ThemedView style={styles.titleContainer}>
         <ThemedText type="title">Welcome!</ThemedText>
-        
-        <Button 
-          size='lg'
-          variant='solid' 
-          action='primary' 
-          onPress={() => alert('ボタンが押されました')}
-        >
-          <ButtonIcon as={() => <IconSymbol name="house.fill" size={18} color="white" />} />
-          <ButtonText>Hellow World!</ButtonText>
-        </Button>
       </ThemedView>
       <ThemedView style={styles.stepContainer}>
+        <PrimaryButton
+          text="Hellow World!"
+          iconName="house.fill"
+          onPress={() => alert('ボタンが押されました')}
+          size='xl'
+        />
+        
+        <PrimaryButton
+          text="アイコンなし"
+          onPress={() => alert('アイコンなしボタン')}
+          size="md"
+        />
         <ThemedText type="subtitle">Step 1: Try it</ThemedText>
         <ThemedText>
           Edit <ThemedText type="defaultSemiBold">app/(tabs)/index.tsx</ThemedText> to see changes.
