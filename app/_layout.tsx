@@ -3,10 +3,12 @@ import { DefaultTheme, ThemeProvider } from '@react-navigation/native';
 import { useFonts } from 'expo-font';
 import { Stack } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
+import Constants from 'expo-constants';
 import 'react-native-reanimated';
 import '../global.css';
 
-export default function RootLayout() {
+// Storybook entry point
+let AppEntryPoint = function RootLayout() {
   const [loaded] = useFonts({
     SpaceMono: require('../assets/fonts/SpaceMono-Regular.ttf'),
   });
@@ -27,4 +29,11 @@ export default function RootLayout() {
       </GluestackUIProvider>
     </ThemeProvider>
   );
+};
+
+// Switch to Storybook when environment variable is set
+if (Constants.expoConfig?.extra?.storybookEnabled === 'true') {
+  AppEntryPoint = require('../.rnstorybook').default;
 }
+
+export default AppEntryPoint;
