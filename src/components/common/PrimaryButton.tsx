@@ -36,9 +36,17 @@ export function PrimaryButton({
   iconSize = 18,
   fullWidth = false,
 }: PrimaryButtonProps) {
+  // disabled状態のスタイリング
+  const disabledStyles = disabled 
+    ? 'opacity-50 bg-gray-400' 
+    : '';
+  
   const buttonClassName = fullWidth 
-    ? className 
-    : `self-start ${className || ''}`;
+    ? `${className || ''} ${disabledStyles}` 
+    : `self-start ${className || ''} ${disabledStyles}`;
+
+  // disabled状態ではアイコンも薄くするが、見えるように調整
+  const iconColor = disabled ? '#6B7280' : 'white';
 
   return (
     <Button
@@ -50,9 +58,9 @@ export function PrimaryButton({
       className={buttonClassName}
     >
       {iconName && (
-        <ButtonIcon as={() => <IconSymbol name={iconName} size={iconSize} color="white" />} />
+        <ButtonIcon as={() => <IconSymbol name={iconName} size={iconSize} color={iconColor} />} />
       )}
-      <ButtonText>{text}</ButtonText>
+      <ButtonText className={disabled ? 'text-gray-300' : ''}>{text}</ButtonText>
     </Button>
   );
 }
