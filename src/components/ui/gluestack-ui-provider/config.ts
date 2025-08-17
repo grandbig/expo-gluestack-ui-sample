@@ -3,18 +3,18 @@ import { vars } from 'nativewind';
 
 export const config = {
   light: vars({
-    '--color-primary-0': '179 179 179',
-    '--color-primary-50': '153 153 153',
-    '--color-primary-100': '128 128 128',
-    '--color-primary-200': '115 115 115',
-    '--color-primary-300': '147 197 253',
-    '--color-primary-400': '96 165 250',
-    '--color-primary-500': '59 130 246',
-    '--color-primary-600': '37 99 235',
-    '--color-primary-700': '29 78 216',
-    '--color-primary-800': '13 13 13',
-    '--color-primary-900': '10 10 10',
-    '--color-primary-950': '8 8 8',
+    '--color-primary-0': '253 253 253',
+    '--color-primary-50': '251 251 251',
+    '--color-primary-100': '246 246 246',
+    '--color-primary-200': '242 242 242',
+    '--color-primary-300': '237 237 237',
+    '--color-primary-400': '230 230 231',
+    '--color-primary-500': '217 217 219',
+    '--color-primary-600': '198 199 199',
+    '--color-primary-700': '189 189 189',
+    '--color-primary-800': '177 177 177',
+    '--color-primary-900': '165 164 164',
+    '--color-primary-950': '157 157 157',
 
     /* Secondary  */
     '--color-secondary-0': '253 253 253',
@@ -99,6 +99,20 @@ export const config = {
     '--color-info-800': '7 90 131',
     '--color-info-900': '5 64 93',
     '--color-info-950': '3 38 56',
+
+    /* Button Primary */
+    '--color-button-primary-0': '240 249 255',
+    '--color-button-primary-50': '224 242 254',
+    '--color-button-primary-100': '186 230 253',
+    '--color-button-primary-200': '125 211 252',
+    '--color-button-primary-300': '56 189 248',
+    '--color-button-primary-400': '14 165 233',
+    '--color-button-primary-500': '2 132 199',
+    '--color-button-primary-600': '3 105 161',
+    '--color-button-primary-700': '7 89 133',
+    '--color-button-primary-800': '12 74 110',
+    '--color-button-primary-900': '14 58 88',
+    '--color-button-primary-950': '8 47 73',
 
     /* Typography */
     '--color-typography-0': '254 254 255',
@@ -251,6 +265,20 @@ export const config = {
     '--color-info-800': '162 221 250',
     '--color-info-900': '199 235 252',
     '--color-info-950': '236 248 254',
+
+    /* Button Primary */
+    '--color-button-primary-0': '8 47 73',
+    '--color-button-primary-50': '14 58 88',
+    '--color-button-primary-100': '12 74 110',
+    '--color-button-primary-200': '7 89 133',
+    '--color-button-primary-300': '3 105 161',
+    '--color-button-primary-400': '2 132 199',
+    '--color-button-primary-500': '14 165 233',
+    '--color-button-primary-600': '56 189 248',
+    '--color-button-primary-700': '125 211 252',
+    '--color-button-primary-800': '186 230 253',
+    '--color-button-primary-900': '224 242 254',
+    '--color-button-primary-950': '240 249 255',
 
     /* Typography */
     '--color-typography-0': '23 23 23',

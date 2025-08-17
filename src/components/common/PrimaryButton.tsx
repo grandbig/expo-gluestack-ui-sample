@@ -38,7 +38,7 @@ export function PrimaryButton({
 }: PrimaryButtonProps) {
   // disabled状態のスタイリング
   const disabledStyles = disabled 
-    ? 'opacity-50 bg-gray-400' 
+    ? 'opacity-50' 
     : '';
   
   const buttonClassName = fullWidth 
@@ -60,7 +60,7 @@ export function PrimaryButton({
       {iconName && (
         <ButtonIcon as={() => <IconSymbol name={iconName} size={iconSize} color={iconColor} />} />
       )}
-      <ButtonText className={disabled ? 'text-gray-300' : ''}>{text}</ButtonText>
+      <ButtonText>{text}</ButtonText>
     </Button>
   );
 }
