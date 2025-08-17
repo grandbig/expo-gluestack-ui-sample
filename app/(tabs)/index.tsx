@@ -5,7 +5,8 @@ import ParallaxScrollView from '@/components/ParallaxScrollView';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
 
-import { Button, ButtonText } from '@/components/ui/button';
+import { Button, ButtonIcon, ButtonText } from '@/components/ui/button';
+import { IconSymbol } from '@/components/ui/IconSymbol';
 
 export default function HomeScreen() {
   return (
@@ -26,6 +27,7 @@ export default function HomeScreen() {
           action='primary' 
           onPress={() => alert('ボタンが押されました')}
         >
+          <ButtonIcon as={() => <IconSymbol name="house.fill" size={18} color="white" />} />
           <ButtonText>Hellow World!</ButtonText>
         </Button>
       </ThemedView>
