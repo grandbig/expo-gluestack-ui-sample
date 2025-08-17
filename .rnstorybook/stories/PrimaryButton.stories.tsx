@@ -19,25 +19,70 @@ const meta: Meta<typeof PrimaryButton> = {
     text: 'ボタン',
     onPress: () => console.log('ボタンが押されました'),
   },
+  argTypes: {
+    text: {
+      control: 'text',
+      description: 'ボタンに表示するテキスト',
+    },
+    iconName: {
+      control: 'select',
+      options: [undefined, 'house.fill', 'heart.fill', 'paperplane.fill'],
+      description: 'ボタンに表示するアイコン',
+    },
+    size: {
+      control: 'select',
+      options: ['sm', 'md', 'lg', 'xl'],
+      description: 'ボタンのサイズ',
+    },
+    disabled: {
+      control: 'boolean',
+      description: 'ボタンを無効化するかどうか',
+    },
+    fullWidth: {
+      control: 'boolean',
+      description: 'ボタンを全幅表示するかどうか',
+    },
+    iconSize: {
+      control: { type: 'range', min: 12, max: 32, step: 2 },
+      description: 'アイコンのサイズ',
+    },
+  },
 };
 
 export default meta;
 
 type Story = StoryObj<typeof meta>;
 
+// ===== 基本スタイル =====
 export const Default: Story = {
   args: {
     text: 'デフォルトボタン',
   },
 };
 
-export const WithIcon: Story = {
+// ===== アイコン付きボタン =====
+export const WithHomeIcon: Story = {
   args: {
     text: 'ホームボタン',
     iconName: 'house.fill',
   },
 };
 
+export const WithHeartIcon: Story = {
+  args: {
+    text: 'お気に入り',
+    iconName: 'heart.fill',
+  },
+};
+
+export const WithSendIcon: Story = {
+  args: {
+    text: '送信',
+    iconName: 'paperplane.fill',
+  },
+};
+
+// ===== サイズバリエーション =====
 export const SmallSize: Story = {
   args: {
     text: '小さいボタン',
@@ -69,6 +114,7 @@ export const ExtraLargeSize: Story = {
   },
 };
 
+// ===== レイアウトオプション =====
 export const FullWidth: Story = {
   args: {
     text: '全幅ボタン',
@@ -77,6 +123,7 @@ export const FullWidth: Story = {
   },
 };
 
+// ===== 状態バリエーション =====
 export const Disabled: Story = {
   args: {
     text: '無効ボタン',
