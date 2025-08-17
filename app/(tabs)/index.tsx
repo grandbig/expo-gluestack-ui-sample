@@ -1,10 +1,11 @@
 import { Image } from 'expo-image';
 import { Platform, StyleSheet } from 'react-native';
 
-import { HelloWave } from '@/components/HelloWave';
 import ParallaxScrollView from '@/components/ParallaxScrollView';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
+
+import { Button, ButtonText } from '@/components/ui/button';
 
 export default function HomeScreen() {
   return (
@@ -18,7 +19,15 @@ export default function HomeScreen() {
       }>
       <ThemedView style={styles.titleContainer}>
         <ThemedText type="title">Welcome!</ThemedText>
-        <HelloWave />
+        
+        <Button 
+          size='lg'
+          variant='solid' 
+          action='primary' 
+          onPress={() => alert('ボタンが押されました')}
+        >
+          <ButtonText>Hellow World!</ButtonText>
+        </Button>
       </ThemedView>
       <ThemedView style={styles.stepContainer}>
         <ThemedText type="subtitle">Step 1: Try it</ThemedText>
