@@ -6,6 +6,7 @@ import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
 
 import { PrimaryButton } from '@/components/common/PrimaryButton';
+import { Button, ButtonText } from '@/components/ui/button';
 
 export default function HomeScreen() {
   return (
@@ -28,11 +29,14 @@ export default function HomeScreen() {
           size='xl'
         />
         
-        <PrimaryButton
-          text="アイコンなし"
-          onPress={() => alert('アイコンなしボタン')}
+        <Button
+          action="secondary"
+          variant="solid"
           size="md"
-        />
+          onPress={() => alert('通常のButtonコンポーネント')}
+        >
+          <ButtonText>通常のButton</ButtonText>
+        </Button>
         <ThemedText type="subtitle">Step 1: Try it</ThemedText>
         <ThemedText>
           Edit <ThemedText type="defaultSemiBold">app/(tabs)/index.tsx</ThemedText> to see changes.
